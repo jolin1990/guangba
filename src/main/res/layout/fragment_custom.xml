@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:context="com.yunxiang.shopkeeper.fragment.CustomFragment"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/line_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/sky_blue"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_middle"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="客户管理"
+            android:textColor="@color/white"
+            android:textSize="18.0sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:background="@drawable/icon_menu"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_menu"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/line_title"
+        android:background="@drawable/bg_edit_sky">
+
+        <TextView
+            android:id="@+id/txt_client"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_text_sky"
+            android:text="到店顾客"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:text="留言板"
+            android:gravity="center"
+            android:textColor="@color/sky_blue"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_menu"
+        android:dividerHeight="0dp"
+        android:divider="#FFCC00"
+        android:background="@color/white">
+    </ListView>
+
+    <ListView
+        android:id="@+id/list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_menu"
+        android:dividerHeight="0dp"
+        android:divider="#FFCC00"
+        android:background="@color/white"
+        android:visibility="gone">
+    </ListView>
+
+</RelativeLayout>

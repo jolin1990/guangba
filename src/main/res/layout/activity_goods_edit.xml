@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_s"
+    tools:ignore="HardcodedText"
+    tools:context=".activity.MerchandiseEditActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <ImageView
+        android:id="@+id/img_01"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/in_title"
+        android:contentDescription="@null"
+        android:background="@drawable/img_01"/>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_below="@+id/img_01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="品名:"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:textSize="13sp"
+            android:hint="商品名称"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_below="@+id/line1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="价格:"/>
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:textSize="13sp"
+            android:hint="单价"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="/"/>
+
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:textSize="13sp"
+            android:hint="规格"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

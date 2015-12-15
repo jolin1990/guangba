@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yunxiang.shopkeeper.activity.LoginActivity"
+    tools:ignore="HardcodedText"
+    android:background="@color/gray_light_s"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/icon_logo"/>
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="55dp"
+            android:hint="请输入手机号"
+            android:text="18720095146"
+            android:inputType="phone"
+            android:drawableStart="@mipmap/icon_user_01"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:drawableStart="@mipmap/icon_password"
+            android:hint="请输入密码"
+            android:text="111111"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@color/sky_blue"
+            android:textColor="@color/white"
+            android:text="登 录"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_forget"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/sky_blue"
+            android:text="忘记密码"/>
+
+        <TextView
+            android:id="@+id/txt_regist"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/sky_blue"
+            android:text="立即注册"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

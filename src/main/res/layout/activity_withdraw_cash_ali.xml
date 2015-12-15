@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gary_backgound"
+    tools:context="com.yunxiang.shopkeeper.WithdrawCashAliActivity"
+    android:orientation="vertical">
+    <include layout="@layout/pay_title"/>
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:paddingRight="20dp"
+        android:layout_height="43dp">
+        <TextView
+            android:id="@+id/tv_t"
+            android:textSize="16sp"
+            android:text="账号"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_ali"
+            android:textSize="20sp"
+            android:background="#00000000"
+            android:inputType="number"
+            android:hint="请在此输入支付包账号"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_commit"
+        android:background="#00CDDA"
+        android:text="下一步"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>

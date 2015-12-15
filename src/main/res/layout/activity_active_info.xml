@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_n"
+    android:orientation="vertical"
+    tools:context="com.yunxiang.guangba.activity.ShopActActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" />
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="320dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/img_near_01" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/txt_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:text="有效期："
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_one"
+            android:layout_centerVertical="true"
+            android:text="2015.10.10 - 2015.11.11"
+            android:textColor="@color/black_text_n"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="活动简介："
+            android:layout_alignParentTop="true"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/txt_two"
+            android:layout_marginBottom="15dp"
+            android:text="购物狂欢节，给亲爱的你最实在的优惠，活动期间买就送"
+            android:textColor="@color/black_text_n"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_end"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="结束活动"
+        android:textColor="@color/black_text_n"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

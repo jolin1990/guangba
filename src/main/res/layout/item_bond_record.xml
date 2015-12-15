@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp">
+        <ImageView
+            android:id="@+id/img_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_01"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/img_item1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_cricle"
+            android:contentDescription="@string/app_name" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dip"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/fl_1"
+        android:gravity="center"
+        android:text="182****1111"
+        android:textColor="@color/black_text_n"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@+id/txt_name"
+        android:background="@drawable/icon_vip"
+        android:contentDescription="@null"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/fl_1"
+        android:gravity="center"
+        android:text="2015-11-12 11:00"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/txt_use"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/txt_date"
+        android:layout_marginBottom="9dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:text="消费使用"
+        android:textColor="@color/black_text_n"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

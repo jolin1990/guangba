@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_s"
+    tools:ignore="HardcodedText"
+    tools:context="com.yunxiang.shopkeeper.activity.AboutUsActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="310dp"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <TextView
+        android:id="@+id/txt_logo"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/in_title"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@mipmap/icon_logo"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/txt_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black_text_n"
+        android:text="版本号：v1.0"/>
+
+</RelativeLayout>

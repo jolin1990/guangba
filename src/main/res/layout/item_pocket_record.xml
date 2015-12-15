@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/img_item"
+        android:layout_width="45dip"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/icon_red_packet"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/img_item"
+        android:gravity="center"
+        android:text="中秋钜惠红包"
+        android:textColor="@color/black_text_n"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/txt_amount1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/black_text_n"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:text="200元" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/img_item"
+        android:gravity="center"
+        android:text="2015-10-22"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_amount2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="9dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="/200个"
+        android:textColor="@color/black_text_n"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_used_num"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@+id/txt_amount2"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="160(已领取)"
+        android:textColor="@color/orange"
+        android:textSize="14sp" />
+
+</RelativeLayout>

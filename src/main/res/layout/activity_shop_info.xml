@@ -1,0 +1,406 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    android:background="@color/gray_light_s"
+    tools:context="com.yunxiang.shopkeeper.activity.ShopInfoActivity">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/line01"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/in_title"
+        android:background="@color/gray_light_n"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line01"
+        android:layout_marginStart="15dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:id="@+id/txt_head_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="店铺头像"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/img_head"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_toEndOf="@+id/txt_head_img"
+                android:layout_marginStart="16dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:background="@drawable/icon_default_hair"/>
+
+            <TextView
+                android:id="@+id/txt_modify_head"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/sky_blue"
+                android:text="更改头像"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="店铺名称"/>
+
+            <EditText
+                android:id="@+id/edt_shop_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="请输入店铺名称"
+                android:layout_marginStart="10dp"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="店铺电话"/>
+
+            <EditText
+                android:id="@+id/edt_shop_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black_text_n"
+                android:hint="请输入店铺电话"
+                android:textColorHint="@color/gray"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:text="店铺类型"/>
+
+            <Spinner
+                android:id="@+id/sp_type"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@color/gray_light_s"
+                android:prompt="@string/shop_classic"
+                android:layout_toEndOf="@+id/txt_type"
+                android:gravity="center"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/icon_arrow_bottom"
+                android:layout_marginStart="280dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="营业时间"/>
+
+            <EditText
+                android:id="@+id/edt_shop_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:text="8:00-20:00"
+                android:textColor="@color/black_text_n"
+                android:background="@null"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="送货上门"/>
+
+            <ToggleButton
+                android:id="@+id/tg_is_visit"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="220dp"
+                android:background="@drawable/switch_btn"
+                android:checked="false"
+                android:textOff=""
+                android:textOn=""/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="联系人"/>
+
+            <EditText
+                android:id="@+id/edt_shop_master"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black_text_n"
+                android:layout_marginStart="10dp"
+                android:hint="输入联系人姓名"
+                android:textColorHint="@color/gray"
+                android:background="@null"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="联系电话"/>
+
+            <EditText
+                android:id="@+id/edt_shop_master_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:textColor="@color/black_text_n"
+                android:layout_marginStart="10dp"
+                android:hint="负责人电话"
+                android:textColorHint="@color/gray"
+                android:background="@null"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="店铺地址"/>
+
+            <EditText
+                android:id="@+id/edt_shop_address"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black_text_n"
+                android:hint="确定店铺地址"
+                android:textColorHint="@color/gray"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:layout_gravity="start|top"
+                android:background="@null"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/btn_location"
+                android:layout_width="60dp"
+                android:layout_height="43dp"
+                android:background="@drawable/icon_position_01"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/gray"
+                android:text="店铺介绍"/>
+
+            <EditText
+                android:id="@+id/edt_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black_text_n"
+                android:hint="对店铺简单介绍"
+                android:textColorHint="@color/gray"
+                android:background="@null"
+                android:inputType="textMultiLine"
+                android:paddingTop="2dp"
+                android:gravity="start|top"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/gray_light_n"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="提交修改"
+        android:background="@color/orange"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/line_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/txt_photograph"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="拍照" />
+        <TextView
+            android:id="@+id/txt_picture"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="相片" />
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

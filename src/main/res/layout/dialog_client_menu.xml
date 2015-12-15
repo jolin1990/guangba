@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="106dip"
+    android:layout_height="150dip"
+    android:background="@drawable/bg_menu"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/txt_menu1"
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center"
+        android:text="发消息"
+        android:textColor="@color/white"/>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dip"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/txt_menu2"
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:gravity="center"
+        android:text="发红包"
+        android:textColor="@color/white"/>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.7dip"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/txt_menu3"
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:gravity="center"
+        android:text="发优惠券"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

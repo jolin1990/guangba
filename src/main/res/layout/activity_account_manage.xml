@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    android:orientation="vertical"
+    tools:context="com.yunxiang.shopkeeper.activity.AccountManageActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_light">
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_data">
+
+            <TextView
+                android:id="@+id/txt_today"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:text="今天"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="8dp"
+                android:gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="1111"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_money"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_date"
+                android:gravity="center_horizontal|bottom"
+                android:text="22222"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_pay"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_below="@+id/rl_1"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="12dp"
+            android:text="支付记录"
+            android:textColor="@color/black_text_n" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/gray" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:divider="@color/gray_light_n"
+        android:layout_marginTop="1dp" />
+
+</LinearLayout>

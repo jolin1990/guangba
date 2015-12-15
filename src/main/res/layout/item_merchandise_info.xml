@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="234dp"
+    android:layout_height="110dp"
+    android:background="@drawable/bg_edit_gray_no"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:id="@+id/rl_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp">
+
+            <ImageView
+                android:id="@+id/img_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:background="@drawable/img_01"/>
+
+            <ImageView
+                android:id="@+id/img_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:background="@drawable/bg_goods"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/fragment"
+            android:gravity="start|center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/black_text_n"
+            android:text="百合小炒"/>
+
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/fragment"
+            android:layout_below="@+id/txt_name">
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="￥68"
+                android:textColor="@color/red"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="43dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_edit"
+                android:contentDescription="@null"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/line1">
+
+            <TextView
+                android:id="@+id/txt_down"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edit_sky"
+                android:text="下架"
+                android:textColor="@color/sky_blue"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/txt_recommend"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="70dp"
+                android:gravity="center"
+                android:background="@color/sky_blue"
+                android:textColor="@color/white"
+                android:text="不再推荐"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_soldout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_transparent_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/txt_fill"
+            android:textSize="16sp"
+            android:text="商品已下架"/>
+        <TextView
+            android:id="@+id/txt_fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/orange"
+            android:text="立即补货"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

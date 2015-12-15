@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_n"
+    tools:ignore="HardcodedText"
+    tools:context="com.yunxiang.shopkeeper.activity.ScanCodeActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/in_title"
+        android:background="@color/gray_light_n"/>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/in_title"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black_text_n"
+            android:text="金额(元)"/>
+
+        <EditText
+            android:id="@+id/edt_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:hint="请填写收款金额"
+            android:textColorHint="@color/gray"
+            android:background="@null"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_certain"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/sky_blue"
+        android:text="确 定"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

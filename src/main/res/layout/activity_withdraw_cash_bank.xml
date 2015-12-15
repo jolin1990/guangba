@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gary_backgound"
+    tools:context="com.yunxiang.shopkeeper.WithdrawCashBankActivity"
+    android:orientation="vertical">
+    <include layout="@layout/pay_title"/>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:text="请输入持卡人本人的银行卡"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <RelativeLayout
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:paddingRight="20dp"
+        android:layout_height="43dp">
+        <TextView
+            android:id="@+id/tv_v"
+            android:textSize="16sp"
+            android:text="持卡人"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_name"
+            android:textSize="20sp"
+            android:background="#00000000"
+            android:inputType="number"
+            android:hint="请在此输入持卡人姓名"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_v"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <ImageView
+        android:background="#F1F0EE"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    <RelativeLayout
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:paddingRight="20dp"
+        android:layout_height="43dp">
+        <TextView
+            android:id="@+id/tv_t"
+            android:textSize="16sp"
+            android:text="账号"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_account"
+            android:textSize="20sp"
+            android:background="#00000000"
+            android:inputType="number"
+            android:hint="请在此输入银行卡卡号"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_commit"
+        android:background="#00CDDA"
+        android:text="下一步"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</LinearLayout>

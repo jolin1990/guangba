@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:ignore="HardcodedText"
+    tools:context="com.yunxiang.shopkeeper.activity.DeliverActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_title"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="起送费"/>
+
+            <EditText
+                android:id="@+id/edt_sending_fee"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_text_white_circle"
+                android:layout_toStartOf="@+id/txt_yuan"/>
+
+            <TextView
+                android:id="@+id/txt_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="元"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="包装费"/>
+
+            <EditText
+                android:id="@+id/edt_pack_fee"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_text_white_circle"
+                android:layout_toStartOf="@+id/txt_yuan1"/>
+
+            <TextView
+                android:id="@+id/txt_yuan1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="元"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="配送费"/>
+
+            <EditText
+                android:id="@+id/edt_deliver_fee"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:inputType="numberDecimal"
+                android:background="@drawable/bg_text_white_circle"
+                android:layout_toStartOf="@+id/txt_yuan2"/>
+
+            <TextView
+                android:id="@+id/txt_yuan2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="元"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="开具发票"/>
+
+            <Button
+                android:id="@+id/btn_is_invoice"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_switch_s"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="支持货到付款"/>
+
+            <Button
+                android:id="@+id/btn_is_cod"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_switch_n"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_light_n"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="16sp"
+                android:text="呼叫派送员"/>
+
+            <Button
+                android:id="@+id/btn_is_calliing_man"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_switch_n"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/line"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_text_sky"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="保 存"/>
+
+</RelativeLayout>

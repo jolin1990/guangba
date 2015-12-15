@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_s"
+    tools:ignore="HardcodedText"
+    tools:context=".activity.PacketRecordActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_title"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/gray">
+
+    </ListView>
+
+</RelativeLayout>

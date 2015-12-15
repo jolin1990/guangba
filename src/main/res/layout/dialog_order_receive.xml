@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    android:background="@drawable/bg_text_white_circle"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:id="@+id/img_01"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:background="@drawable/icon_attention_01"/>
+
+        <TextView
+            android:id="@+id/txt_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/img_01"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="确认接单"
+            android:textColor="@color/black_text_n"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:textColor="@color/black_text_n"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="接单后无法取消订单"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="@color/sky_blue"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/txt_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确认"
+            android:textSize="16sp"
+            android:textColor="@color/sky_blue"/>
+
+    </LinearLayout>
+</LinearLayout>

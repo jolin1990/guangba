@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/img_head"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:background="@drawable/img_01"/>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/img_head"
+            android:layout_marginStart="3dp"
+            android:text="xxxx"
+            android:textColor="@color/black_text_n"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="20104"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="65dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/txt_receive_name"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black_text_s"
+                android:text="收货人："/>
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textColor="@color/black_text_s"
+                android:layout_weight="1"
+                android:text="电话："/>
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black_text_s"
+                android:text="地址："/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:text="￥100"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:id="@+id/txt_no_receive"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/bg_text_white_circle"
+            android:textColor="@color/black_text_n"
+            android:text="拒接"/>
+
+        <Button
+            android:id="@+id/btn_call_receiver"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/icon_relation_phone"
+            android:textColor="@color/black_text_n"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_receive"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_text_orange"
+            android:textColor="@color/white"
+            android:text="接单"/>
+
+        <TextView
+            android:id="@+id/txt_has_sent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="已送货，等待顾客确认"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

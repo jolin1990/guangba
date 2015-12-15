@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Shopkeeper</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_find_psw">FindPswActivity</string>
+    <string name="title_activity_account_manage">AccountManageActivity</string>
+    <string name="title_activity_regist_next">RegistNextActivity</string>
+
+    <string name="shop_classic"></string>
+    <string-array name="shop_classic">
+        <item>餐饮</item>
+        <item>娱乐</item>
+        <item>生活</item>
+        <item>美容</item>
+        <item>医疗</item>
+        <item>其他</item>
+    </string-array>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_shop_info">ShopInfoActivity</string>
+    <string name="title_activity_my_bankcard">MyBankcardActivity</string>
+    <string name="title_activity_my_send_package">MySendPackageActivity</string>
+    <string name="title_activity_send_cradit">SendCraditActivity</string>
+    <string name="title_activity_add_image">AddImageActivity</string>
+    <string name="title_activity_salse_promotion">SalsePromotionActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_remind_set">RemindSetActivity</string>
+    <string name="title_activity_modify_psw">ModifyPswActivity</string>
+    <string name="title_activity_modify_loginpsw">ModifyLoginpswActivity</string>
+    <string name="title_activity_feed_back">FeedBackActivity</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="title_activity_credit_recorder">CreditRecorderActivity</string>
+    <string name="title_activity_discount">DiscountActivity</string>
+    <string name="title_activity_bond_bagful">BondBagfulActivity</string>
+    <string name="title_activity_recorder_info">RecorderInfoActivity</string>
+    <string name="title_activity_goods_edit">GoodsEditActivity</string>
+    <string name="title_activity_send_info">SendInfoActivity</string>
+    <string name="title_activity_client_record">ClientRecordActivity</string>
+    <string name="title_activity_send_packet">SendPacketActivity</string>
+    <string name="title_activity_packet">PacketActivity</string>
+    <string name="title_activity_coupon">CouponActivity</string>
+    <string name="title_activity_goods_add">GoodsAddActivity</string>
+    <string name="title_activity_bond_beacon">BondBeaconActivity</string>
+    <string name="title_activity_shop">ShopActivity</string>
+    <string name="title_activity_scan_code">ScanCodeActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
+    <string name="title_activity_addres">AddresActivity</string>
+    <string name="title_activity_deliver">DeliverActivity</string>
+    <string name="title_activity_order_item">OrderItemActivity</string>
+    <string name="title_activity_leave_msg">LeaveMsgActivity</string>
+    <string name="title_activity_merchandise">MerchandiseActivity</string>
+    <string name="title_activity_send_coupon">SendCouponActivity</string>
+    <string name="title_activity_coupon_select">CouponSelectActivity</string>
+    <string name="title_activity_coupon_list">CouponListActivity</string>
+    <string name="title_activity_active">ActiveActivity</string>
+    <string name="title_activity_active_add">ActiveAddActivity</string>
+    <string name="title_activity_customer_manage">CustomerManageActivity</string>
+    <string name="title_activity_message_send">MessageSendActivity</string>
+    <string name="title_activity_pay_record">PayRecordActivity</string>
+    <string name="title_activity_my_count">MyCountActivity</string>
+    <string name="title_activity_message_leave">MessageLeaveActivity</string>
+    <string name="title_activity_evaluate">EvaluateActivity</string>
+    <string name="title_activity_qrcode_getter">QRCodeGetterActivity</string>
+    <string name="title_activity_recharge">RechargeActivity</string>
+    <string name="title_activity_withdraw_cash">WithdrawCashActivity</string>
+    <string name="title_activity_withdraw_cash_num">WithdrawCashNumActivity</string>
+    <string name="title_activity_withdraw_cash_bank">WithdrawCashBankActivity</string>
+    <string name="title_activity_withdraw_cash_finish">WithdrawCashFinishActivity</string>
+</resources>

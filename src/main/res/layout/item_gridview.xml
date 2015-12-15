@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_edit_gray_no"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/img_item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/img_01"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dip"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/img_item"
+        android:gravity="center"
+        android:text="百合小炒"
+        android:textColor="@color/black_text_n"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_item"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/red"
+        android:text="68元/份"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:text="详情：3635462"/>
+
+    <TextView
+        android:id="@+id/txt_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/orange"
+        android:text="不再推荐"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/orange"
+        android:text="售完"/>
+
+
+
+</RelativeLayout>

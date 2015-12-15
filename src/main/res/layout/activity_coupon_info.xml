@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:context=".activity.CouponInfoActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/in_title"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_money"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="￥30"
+            android:textColor="@color/orange"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/txt_money"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="使用说明:" />
+
+            <TextView
+                android:id="@+id/txt_info"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="top"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:text="订单满99元可用，***************************" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/line1"
+            android:layout_toEndOf="@+id/txt_money"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="有效期:"
+                android:textColor="@color/orange" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_date1"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="2015-10-19 21:00 至"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="2015-10-29 21:00"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/rl_1"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        android:text="中秋钜惠抵用券"
+        android:textColor="@color/black_text_n"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_name"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="已领取:  " />
+
+        <TextView
+            android:id="@+id/txt_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="20"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/txt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="/50张" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/line2">
+
+        <TextView
+            android:id="@+id/txt_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/gray_light_n"
+            android:textColor="@color/black_text_n"
+            android:text="领取"/>
+
+        <TextView
+            android:id="@+id/txt_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="@color/black_text_n"
+            android:text="使用记录"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gray"
+        android:layout_below="@+id/line3"/>
+
+
+</RelativeLayout>

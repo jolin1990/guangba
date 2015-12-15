@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="50dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:background="@drawable/img_01"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:background="@mipmap/icon_cricle"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="小花花姑凉"
+            android:textColor="@color/black_text_n"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_up_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="上次到店：11-30 10:23"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="到店：5次"
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_up_up_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="end"
+            android:text="11:05"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_send"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="送"
+            android:background="@drawable/bg_text_orange"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/txt_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="￥2036"
+                android:textColor="@color/red_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_total"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="3dp"
+                android:gravity="center"
+                android:layout_toStartOf="@+id/txt_money"
+                android:background="@drawable/bg_edit_sky"
+                android:text="总"
+                android:textColor="@color/sky_blue"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checked"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        style="@style/CustomCheckboxTheme"/>
+
+</LinearLayout>

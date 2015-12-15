@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yunxiang.shopkeeper">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 使用蓝牙设备的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 管理蓝牙设备的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取当前服务区国家代码。 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<!--摄像头权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".TApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".activity.FindPswActivity"
+            android:label="@string/title_activity_find_psw" />
+        <activity
+            android:name=".activity.AccountManageActivity"
+            android:label="@string/title_activity_account_manage" />
+
+        <activity
+            android:name=".activity.SearchActivity"
+            android:label="@string/title_activity_search" />
+        <activity
+            android:name=".activity.ShopInfoActivity"
+            android:label="@string/title_activity_shop_info" />
+        <activity
+            android:name=".activity.MyBankcardActivity"
+            android:label="@string/title_activity_my_bankcard" />
+
+        <activity
+            android:name=".activity.AddSpannerActivity"
+            android:label="@string/title_activity_add_image" />
+        <activity
+            android:name=".activity.SalsePromotionActivity"
+            android:label="@string/title_activity_salse_promotion" />
+        <activity
+            android:name=".activity.MyShopActivity"
+            android:label="@string/title_activity_setting" />
+        <activity
+            android:name=".activity.RemindSetActivity"
+            android:label="@string/title_activity_remind_set" />
+        <activity
+            android:name=".activity.ModifyPswActivity"
+            android:label="@string/title_activity_modify_psw" />
+        <activity
+            android:name=".activity.ModifyLoginpswActivity"
+            android:label="@string/title_activity_modify_loginpsw" />
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:label="@string/title_activity_feed_back" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:label="@string/title_activity_about_us" />
+        <activity
+            android:name=".activity.PacketRecordActivity"
+            android:label="@string/title_activity_credit_recorder" />
+        <activity
+            android:name=".activity.CouponEditActivity"
+            android:label="@string/title_activity_bond_bagful" />
+
+        <activity
+            android:name=".activity.MerchandiseEditActivity"
+            android:label="@string/title_activity_goods_edit" />
+        <activity
+            android:name=".activity.SendInfoActivity"
+            android:label="@string/title_activity_send_info" />
+        <activity
+            android:name=".activity.ClientRecordActivity"
+            android:label="@string/title_activity_client_record" />
+        <activity
+            android:name=".activity.PacketEditActivity"
+            android:label="@string/title_activity_send_packet" />
+        <activity
+            android:name=".activity.PacketInfoActivity"
+            android:label="@string/title_activity_packet" />
+        <activity
+            android:name=".activity.CouponInfoActivity"
+            android:label="@string/title_activity_coupon" />
+        <activity
+            android:name=".activity.MerchandiseAddActivity"
+            android:label="@string/title_activity_goods_add" />
+        <activity android:name=".activity.ActiveInfoActivity" />
+        <activity
+            android:name=".activity.ShopActivity"
+            android:label="@string/title_activity_shop" />
+        <activity
+            android:name=".activity.ScanCodeActivity"
+            android:label="@string/title_activity_scan_code" />
+        <activity
+            android:name=".activity.OrderActivity"
+            android:label="@string/title_activity_order" />
+
+        <activity
+            android:name=".activity.DeliverActivity"
+            android:label="@string/title_activity_deliver" />
+        <activity
+            android:name=".activity.OrderItemActivity"
+            android:label="@string/title_activity_order_item" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+
+
+
+        <activity
+            android:name=".activity.MerchandiseActivity"
+            android:label="@string/title_activity_merchandise" />
+        <activity
+            android:name=".activity.CouponActivity"
+            android:label="@string/title_activity_send_coupon" />
+        <activity
+            android:name=".activity.CustomerListActivity"
+            android:label="@string/title_activity_coupon_select" />
+        <activity
+            android:name=".activity.CouponListActivity"
+            android:label="@string/title_activity_coupon_list" />
+        <activity
+            android:name=".activity.PacketActivity"
+            android:label="@string/title_activity_packet" />
+        <activity
+            android:name=".activity.ActiveActivity"
+            android:label="@string/title_activity_active" />
+        <activity
+            android:name=".activity.ActiveAddActivity"
+            android:label="@string/title_activity_active_add" />
+        <activity
+            android:name=".activity.CustomerManageActivity"
+            android:label="@string/title_activity_customer_manage" />
+        <activity
+            android:name=".activity.MessageSendActivity"
+            android:label="@string/title_activity_message_send" />
+        <activity
+            android:name=".activity.PayRecordActivity"
+            android:label="@string/title_activity_pay_record" />
+        <activity
+            android:name=".activity.MyCountActivity"
+            android:label="@string/title_activity_my_count" />
+        <activity
+            android:name=".activity.MessageLeaveActivity"
+            android:label="@string/title_activity_message_leave" />
+        <activity
+            android:name=".activity.EvaluateActivity"
+            android:label="@string/title_activity_evaluate"></activity>
+        <activity android:name=".activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
+        <activity
+            android:name=".activity.RechargeActivity"
+            android:label="@string/title_activity_recharge" >
+        </activity>
+        <activity
+            android:name=".activity.WithdrawCashActivity"
+            android:label="@string/title_activity_withdraw_cash" >
+        </activity>
+        <activity
+            android:name=".activity.WithdrawCashAliActivity"
+            android:label="@string/title_activity_withdraw_cash_num" >
+        </activity>
+        <activity
+            android:name=".activity.WithdrawCashBankActivity"
+            android:label="@string/title_activity_withdraw_cash_bank" >
+        </activity>
+        <activity
+            android:name=".activity.WithdrawCashFinishActivity"
+            android:label="@string/title_activity_withdraw_cash_finish" >
+        </activity>
+    </application>
+
+</manifest>

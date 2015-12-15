@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:id="@+id/rl_s"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_s1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_money_s"
+                android:layout_width="80dip"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_favorable_s"
+                android:gravity="center"
+                android:textColor="@color/orange"
+                android:textSize="20sp"
+                android:text="￥30"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_name_s"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="10dip"
+            android:layout_toEndOf="@+id/rl_s1"
+            android:gravity="center"
+            android:text="抵用券"
+            android:textColor="@color/black_text_n"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_limit_s"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="1dip"
+            android:layout_toEndOf="@+id/txt_name_s"
+            android:gravity="center"
+            android:text="(满100可用)"
+            android:textColor="@color/black_text_n"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_used_num_s"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/rl_s1"
+            android:gravity="center"
+            android:text="160(已领取)"
+            android:textColor="@color/orange"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_amount_s"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="9dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/txt_used_num_s"
+            android:gravity="center"
+            android:text="/200个"
+            android:textColor="@color/black_text_n"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_date_s"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="2015-11-12"
+            android:textColor="@color/black_text_n"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_ended_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_date_s"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="已领完"
+            android:textColor="@color/gray"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_n"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_n1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_money_n"
+                android:layout_width="80dip"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_favorable_n"
+                android:gravity="center"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:text="￥30"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_name_n"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="10dip"
+            android:layout_toEndOf="@+id/rl_n1"
+            android:gravity="center"
+            android:text="抵用券"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_limit_n"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="1dip"
+            android:layout_toEndOf="@+id/txt_name_n"
+            android:gravity="center"
+            android:text="(满100可用)"
+            android:textColor="@color/black_text_n"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_used_num_n"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/rl_n1"
+            android:gravity="center"
+            android:text="200(已领完)"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_amount_n"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="9dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/txt_used_num_n"
+            android:gravity="center"
+            android:text="/200个"
+            android:textColor="@color/black_text_n"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_date_n"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="2015-11-12"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_ended_n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_date_n"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="已领完"
+            android:textColor="@color/black_text_n"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

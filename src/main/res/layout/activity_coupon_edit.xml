@@ -1,0 +1,320 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:ignore="HardcodedText"
+    android:orientation="vertical"
+    tools:context="com.yunxiang.shopkeeper.activity.BondDiscountActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        layout="@layout/in_title_bar"/>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black_text_n"
+        android:text="准备给所有人发抵用券"/>
+
+    <LinearLayout
+        android:id="@+id/line_name"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+      android:layout_marginRight="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+           android:layout_marginLeft="6dp"
+          android:layout_marginRight="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="名  称"/>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+           android:paddingLeft="10dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="13sp"
+            android:paddingRight="5dp"
+            android:hint="抵用券名称"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_amount"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="面  值"/>
+
+        <EditText
+            android:id="@+id/edt_money"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:inputType="number"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="13sp"
+            android:text="20"
+            android:hint="单个金额"/>
+
+        <TextView
+            android:id="@+id/txt_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="￥"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_limit"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="限  额"/>
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/edt_money_limit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="13sp"
+            android:text="100"
+            android:hint="限定金额"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="￥"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_discount"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="折  扣"/>
+
+        <EditText
+            android:id="@+id/edt_discount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:textSize="13sp"
+            android:hint="折扣额"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:text="折"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_number"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="数  量"/>
+
+        <EditText
+            android:id="@+id/edt_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:inputType="number"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="13sp"
+            android:hint="抵用券数量"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:text="张"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="有效期"/>
+
+        <TextView
+            android:id="@+id/txt_date1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="12sp"
+            android:hint="起始日期"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black_text_n"
+            android:text="至"/>
+
+        <TextView
+            android:id="@+id/txt_date2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="1dp"
+            android:paddingEnd="1dp"
+            android:gravity="center_vertical|end"
+            android:background="@null"
+            android:textSize="12sp"
+            android:hint="结束日期"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_info"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:gravity="top"
+        android:background="@color/white"
+        android:textSize="13sp"
+        android:text="满就送"
+        android:hint="优惠券的使用规则及注意事项"/>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/sky_blue"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="发 送"/>
+
+</LinearLayout>

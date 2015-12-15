@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dip"
+        android:gravity="center"
+        android:text="2015-10-25 13:25"
+        android:textColor="@color/black_text_n"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txt_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:text="流水号：20361111"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txt_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/txt_money"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/red_light"
+        android:background="@drawable/bg_edit_orenge"
+        android:text="送"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txt_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/orange"
+        android:text="￥111"
+        android:textSize="15sp" />
+
+</RelativeLayout>

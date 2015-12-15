@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:ignore="HardcodedText"
+    tools:context="com.yunxiang.shopkeeper.activity.PacketActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="310dp"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        layout="@layout/in_title_bar"/>
+
+    <TextView
+        android:id="@+id/txt_record"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:text="记录"
+        android:background="@color/gray_light_s"
+        android:layout_toEndOf="@+id/in_title"
+        android:gravity="center"
+        android:textColor="@color/sky_blue"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="375dp"
+        android:layout_below="@+id/in_title">
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="260dp"
+            android:background="@drawable/icon_packet_red"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_troop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="群红包"
+        android:background="@color/sky_blue"/>
+
+    <TextView
+        android:id="@+id/txt_personal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/txt_troop"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="个人红包"
+        android:background="@color/sky_blue"/>
+
+
+    <TextView
+        android:id="@+id/pocket_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:textSize="15sp"
+        android:text="红包玩法介绍"/>
+
+</RelativeLayout>

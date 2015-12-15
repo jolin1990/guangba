@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:ignore="HardcodedText"
+    android:orientation="vertical"
+    tools:context="com.yunxiang.shopkeeper.activity.PayRecordActivity">
+
+    <include
+        android:id="@+id/in_title"
+        android:layout_width="310dp"
+        android:layout_height="48dip"
+        layout="@layout/in_title_bar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/img_01"/>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_icon"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black_text_n"
+            android:textSize="15sp"
+            android:text="小小花花花姑凉"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_icon"
+            android:layout_below="@+id/txt_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black_text_n"
+            android:textSize="15sp"
+            android:text="1833333333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/txt_money"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="3dp"
+            android:textColor="@color/sky_blue"
+            android:background="@drawable/bg_edit_sky"
+            android:textSize="15sp"
+            android:text="总"/>
+
+        <TextView
+            android:id="@+id/txt_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            android:text="￥200"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="76dp"
+        android:background="@color/gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp">
+
+        <TextView
+            android:id="@+id/txt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black_text_n"
+            android:textSize="15sp"
+            android:text="到店次数：8次"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/txt_number"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black_text_n"
+            android:textSize="15sp"
+            android:text="(上次到店 10-16 11:11)"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_info_list"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="1dp"
+        android:background="@color/gray_light_n"
+        android:textColor="@color/black_text_n"
+        android:textSize="15sp"
+        android:text="消费详情(20条)"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gray_light_n"
+        android:dividerHeight="0.5dp"/>
+
+</LinearLayout>

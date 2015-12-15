@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:clickable="true"
+            android:background="#ff0000"
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请确认信息"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1DD6E7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="业务金额"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/txt_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tv_money"
+                android:text="￥ 100.00"
+                android:textColor="#D4D4D4"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/rl_money"
+            android:id="@+id/rl_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="业务账号"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/tv_account"
+                android:layout_marginLeft="20dp"
+                android:text="12345566677"
+                android:textColor="#D4D4D4"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/rl_money"
+            android:id="@+id/rl_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="业务类型"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_category"
+                android:id="@+id/txt_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="支付宝"
+                android:textColor="#D4D4D4"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E6E6E6" />
+
+    <Button
+        android:id="@+id/bt_commit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:text="确认"
+        android:textColor="#1DD6E7"
+        android:textSize="20sp" />
+</LinearLayout>

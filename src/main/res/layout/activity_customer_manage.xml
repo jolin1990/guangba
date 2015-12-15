@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:ignore="HardcodedText"
+    android:orientation="vertical"
+    tools:context="com.yunxiang.shopkeeper.activity.CustomerManageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/in_title"
+            android:layout_width="310dp"
+            android:layout_height="48dip"
+            layout="@layout/in_title_bar"/>
+
+        <Button
+            android:id="@+id/btn_to_msg"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@+id/in_title"
+            android:background="@drawable/icon_issue_sky"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light_n"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txt_my"
+            android:layout_width="111dp"
+            android:layout_height="34dip"
+            android:layout_marginStart="42dp"
+            android:text="我的顾客"
+            android:gravity="center"
+            android:textColor="@color/sky_blue"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/line_left"
+            android:layout_width="110dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txt_my"
+            android:layout_marginStart="42dp"
+            android:background="@color/sky_blue"/>
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="111dp"
+            android:layout_height="34dip"
+            android:layout_marginEnd="42dp"
+            android:layout_alignParentEnd="true"
+            android:text="消息"
+            android:gravity="center"
+            android:textColor="@color/black_text_n"
+            android:background="@color/white"/>
+
+        <View
+            android:id="@+id/line_right"
+            android:layout_width="110dp"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txt_my"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="42dp"
+            android:background="@color/sky_blue"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_light_n"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gray_light_n"
+        android:dividerHeight="0.5dp"
+        android:layout_below="@+id/in_title"/>
+
+</LinearLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light_n"
+    tools:context="com.yunxiang.shopkeeper.activity.OrderItemActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_title"
+        android:layout_marginTop="0.5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="收货信息"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:text="姓名："/>
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:text="电话："/>
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:singleLine="false"
+                android:text="地址："/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone">
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light_n"
+            android:layout_marginStart="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:text="总计："/>
+            <TextView
+                android:id="@+id/txt_money"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:text="￥"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="起送时间"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txt_sending_date"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black_text_n"
+                android:textSize="14sp"
+                android:text="请尽快送出"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="下单时间"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:id="@+id/txt_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="2015"/>
+                <TextView
+                    android:id="@+id/txt_order1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="下单"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="2015"/>
+                <TextView
+                    android:id="@+id/txt_order2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="接单"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:id="@+id/txt_date3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="2015"/>
+                <TextView
+                    android:id="@+id/txt_order3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="接单"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:id="@+id/txt_date4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="2015"/>
+                <TextView
+                    android:id="@+id/txt_order4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black_text_n"
+                    android:textSize="14sp"
+                    android:text="接单"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_end"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/txt_no_receive"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="@color/black_text_n"
+            android:text="拒接"/>
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/icon_relation_phone"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_receive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/orange"
+            android:textColor="@color/white"
+            android:text="接单"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="已完成"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

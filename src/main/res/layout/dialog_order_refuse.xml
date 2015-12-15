@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/bg_text_white_circle"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/txt_reason1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/sky_blue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="商品缺货"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/txt_reason2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:textColor="@color/sky_blue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="不在配送范围内"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/txt_reason3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:textColor="@color/sky_blue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="不在营业时间"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/txt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:textColor="@color/sky_blue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="取消"/>
+</LinearLayout>

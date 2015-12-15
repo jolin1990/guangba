@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    tools:ignore="HardcodedText"
+    tools:context="com.yunxiang.shopkeeper.activity.OrderActivity">
+
+    <LinearLayout
+        android:id="@+id/line0"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/gray_light_s"
+        android:orientation="horizontal"
+        tools:ignore="HardcodedText">
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/icon_return"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/txt_middle"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="订单"
+            android:textColor="@color/black_text_n"
+            android:textSize="18.0sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:background="@drawable/icon_set"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/line0"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rd_txt1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:checked="true"
+                android:button="@null"
+                android:textSize="15sp"
+                android:textColor="@color/sky_blue"
+                android:text="新订单"/>
+
+            <TextView
+                android:id="@+id/rd_line1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:gravity="center"
+                android:checked="true"
+                android:button="@null"
+                android:background="@color/sky_blue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rd_txt2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:button="@null"
+                android:textSize="15sp"
+                android:textColor="@color/black_text_n"
+                android:text="已接单"/>
+
+            <TextView
+                android:id="@+id/rd_line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:gravity="center"
+                android:button="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rd_txt3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:button="@null"
+                android:textSize="15sp"
+                android:textColor="@color/black_text_n"
+                android:text="已完成"/>
+
+            <TextView
+                android:id="@+id/rd_line3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:gravity="center"
+                android:button="@null"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line4"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rd_txt4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:button="@null"
+                android:textSize="15sp"
+                android:textColor="@color/black_text_n"
+                android:text="已取消"/>
+
+            <TextView
+                android:id="@+id/rd_line4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:gravity="center"
+                android:button="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/gray_light_n"
+        android:dividerHeight="4dp"
+        android:layout_below="@+id/rg"/>
+
+</RelativeLayout>
