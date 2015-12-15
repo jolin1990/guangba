@@ -125,6 +125,10 @@ public class Const {
     //图片地址
     public static final String URL_PICTURE_PATH = TApplication.URL_STRING+"getPictureFile?fileEntryId=";
     //public static final String URL_IMG1 = TApplication.URL_STRING+"getPictureFile?fileEntryId=";
+    //充值
+    public static final String URL_RECHARGE=TApplication.URL_STRING+"recharge/new";
+    //修改充值状态
+    public static final String URL_UPDATA_RECHARGE=TApplication.URL_STRING+"recharge/update";
     //字典
     public static final String VAL_SPANNER_MODE = "spanner_mode";
     public static final String VAL_SPANNER_PIC = "spanner_pic";

@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import com.yunxiang.shopkeeper.model.Active;
 import com.yunxiang.shopkeeper.model.Category;
+import com.yunxiang.shopkeeper.model.Charge;
 import com.yunxiang.shopkeeper.model.Merchandise;
 import com.yunxiang.shopkeeper.model.Order;
 import com.yunxiang.shopkeeper.model.Packet;
@@ -36,6 +37,7 @@ public class TApplication extends Application {
 
     public static User user;
     public static Context context;
+    public static Charge charge;
     public static SparseArray<String> map = new SparseArray<String>();
     public static DictionaryService dictionaryService;
     public static DisplayMetrics displayMetrics;
@@ -56,6 +58,7 @@ public class TApplication extends Application {
     public static List<ShopCustomer> shopCustomerList;// = new ArrayList<ShopCustomer>();  //到店顾客，选发送红包时用到
     public static List<ShopCustomer> selectedCustomers = new ArrayList<ShopCustomer>();     //到店顾客，选发送红包时用到已选择客户
     public static List<Active> activeList;
+   public  static String CHANNEL="alipay";//支付的渠道
 
     @Override
     public void onCreate() {

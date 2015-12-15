@@ -1,6 +1,8 @@
 package com.yunxiang.shopkeeper.activity;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,7 +14,11 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.pingplusplus.android.PaymentActivity;
 import com.yunxiang.shopkeeper.R;
+import com.yunxiang.shopkeeper.TApplication;
+import com.yunxiang.shopkeeper.biz.PayBiz;
+import com.yunxiang.shopkeeper.utils.Const;
 import com.yunxiang.shopkeeper.view.RechargeDialog;
 
 
@@ -119,8 +125,6 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
                 }
                 money = String.format("%.2f", v1);
 
-
-
                 rechargeDialog=new RechargeDialog(this,R.style.MyDialogStyle,"1344557355",money,rechargeCategory);
                 rechargeDialog.show();
                 break;
@@ -131,74 +135,53 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
     class PayCallback implements Handler.Callback{
         @Override
         public boolean handleMessage(Message msg) {
-//            if (msg.what== Const.MSG_SUCCESS){
-//                String charge= (String) msg.obj;
-//                //调起支付
-//                pay(charge);
-//            }
+            if (msg.what== Const.MSG_SUCCESS){
+                String charge= (String) msg.obj;
+
+                pay(charge);
+            }
             return true;
         }
     }
-//    private void pay(String charge) {
-//        Intent intent = new Intent();
-//        String packageName = getApplicationContext().getPackageName();
-//
-//        ComponentName componentName = new ComponentName(packageName, packageName + ".wxapi.WXPayEntryActivity");
-//        intent.setComponent(componentName);
-//        intent.putExtra(PaymentActivity.EXTRA_CHARGE, charge);
-//
-//        startActivityForResult(intent, REQUEST_CODE_PAYMENT);
-//    }
+    private void pay(String charge) {
+        Intent intent = new Intent();
+        String packageName = TApplication.context.getPackageName();
 
-    @Override
+        ComponentName componentName = new ComponentName(packageName, packageName + ".wxapi.WXPayEntryActivity");
+        intent.setComponent(componentName);
+        intent.putExtra(PaymentActivity.EXTRA_CHARGE, charge);
+
+        startActivityForResult(intent, REQUEST_CODE_PAYMENT);
+    }
+    public  void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == REQUEST_CODE_PAYMENT) {
+            if (resultCode == Activity.RESULT_OK) {
+                String result = data.getExtras().getString("pay_result");
+
+                String errorMsg = data.getExtras().getString("error_msg");
+                String extraMsg = data.getExtras().getString("extra_msg");
+                if("success".equals(result)){
+
+//                    UpdataOrderSatusCallback callback=new UpdataOrderSatusCallback();
+//                    Handler handler=new Handler(callback);
+//                    PayBiz.getInstance().upDataOrderStatus(handler);
+                }else{
+
+                }
+
+            }
+        }
+    }
     public void rechargeDialogCallbackClose() {
         rechargeDialog.dismiss();
     }
 
     @Override
     public void rechargeDialogCallbackButton() {
+
         PayCallback callback=new PayCallback();
         Handler handler=new Handler(callback);
-       //向后台请求：
-
-//        commitOrder(handler);
-
-
-
-
-
-
+        PayBiz.getInstance().commitOrder(handler, money);
     }
-
-
-//    public  void commitOrder(final Handler handler,String originalPrice, String confirmPrice){
-//        final List<BasicNameValuePair> list=new ArrayList<BasicNameValuePair>();
-//        list.add(new BasicNameValuePair("customerId","3"));
-//        list.add(new BasicNameValuePair("shopId","14"));
-//        list.add(new BasicNameValuePair("confirmPrice",confirmPrice));
-//        list.add(new BasicNameValuePair("subject","测试"));
-//
-//        list.add(new BasicNameValuePair("originalPrice",originalPrice));
-//
-//
-////        list.add(new BasicNameValuePair("couponId","9"));
-//        list.add(new BasicNameValuePair("body","支付宝测试"));
-//        list.add(new BasicNameValuePair("channel","alipay"));
-//
-//        list.add(new BasicNameValuePair("client_ip", NetUtil.getLocalIpAddress(getApplicationContext())));
-//        new Thread(){
-//            @Override
-//            public void run() {
-//                String url= Const.URL_PAY;
-//                String result = HttpUtils.doPostAsyn(url, list);
-//                Log.d("TAG", "result=" + result);
-//                //解析charge ,用于支付成功后修改订单状态
-//                Message message = Message.obtain();
-//                message.what=Const.MSG_SUCCESS;
-//                message.obj=result;
-//                handler.sendMessage(message);
-//            }
-//
-//        }.start();
-//    };
 }

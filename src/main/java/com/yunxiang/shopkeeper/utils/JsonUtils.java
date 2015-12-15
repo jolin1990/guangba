@@ -6,6 +6,7 @@ import com.yunxiang.shopkeeper.model.Active;
 import com.yunxiang.shopkeeper.model.Address;
 import com.yunxiang.shopkeeper.model.AppVersion;
 import com.yunxiang.shopkeeper.model.Category;
+import com.yunxiang.shopkeeper.model.Charge;
 import com.yunxiang.shopkeeper.model.Customer;
 import com.yunxiang.shopkeeper.model.Merchandise;
 import com.yunxiang.shopkeeper.model.Order;
@@ -588,4 +589,19 @@ public class JsonUtils {
         }
         return appVersion;
     }
+
+
+    public static Charge getCharge(String result){
+        try {
+            JSONObject jsonObject=new JSONObject(result);
+            Charge charge=new Charge();
+//            charge.setId(jsonObject.optString("id"));
+            charge.setOrderNo(jsonObject.optString("serialNumber"));
+            return charge;
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
