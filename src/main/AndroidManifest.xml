@@ -156,12 +156,6 @@
         <activity
             android:name=".activity.OrderItemActivity"
             android:label="@string/title_activity_order_item" />
-        <!--
-             ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
-
-
 
         <activity
             android:name=".activity.MerchandiseActivity"
