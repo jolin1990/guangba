@@ -24,7 +24,7 @@
            android:id="@+id/et_money"
            android:textSize="20sp"
            android:background="#00000000"
-           android:inputType="number"
+           android:inputType="numberDecimal"
            android:hint="请在此输入金额"
            android:layout_marginLeft="10dp"
            android:layout_toRightOf="@+id/tv_t"

@@ -66,7 +66,7 @@ public class TApplication extends Application {
 
         switch (versionType){
             case Const.TEST_VERTION:
-                URL_STRING ="http://192.168.1.19/yunxiang-seller/";
+                URL_STRING ="http://192.168.1.6/yunxiang-seller/";
                 break;
             case Const.DEBUG_VERTION:
                 URL_STRING = "http://192.168.1.11/yunxiang-seller/";

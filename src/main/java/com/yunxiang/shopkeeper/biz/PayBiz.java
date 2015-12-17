@@ -14,7 +14,9 @@ import com.yunxiang.shopkeeper.utils.NetUtil;
 import org.apache.http.message.BasicNameValuePair;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -37,26 +39,42 @@ public class PayBiz {
 //    client_ip  发起支付请求终端的 IP 地址
 
     public  void commitOrder(final Handler handler,String amount){
-        final List<BasicNameValuePair> list=new ArrayList<BasicNameValuePair>();
-        list.add(new BasicNameValuePair("amount",amount));
-        list.add(new BasicNameValuePair("subject","测试"));
-//        list.add(new BasicNameValuePair("couponId","9"));
-        list.add(new BasicNameValuePair("body","支付宝测试"));
-        list.add(new BasicNameValuePair("channel", TApplication.CHANNEL));
+       final Map<String, String> param=new HashMap<String, String>();
+        param.put("amount",amount);
+        param.put("subject","测试");
+        param.put("body","测试");
+        param.put("channel", TApplication.CHANNEL);
+        param.put("client_ip", NetUtil.getLocalIpAddress(TApplication.context));
 
-        list.add(new BasicNameValuePair("client_ip", NetUtil.getLocalIpAddress(TApplication.context)));
+
+//        final List<BasicNameValuePair> list=new ArrayList<BasicNameValuePair>();
+//        list.add(new BasicNameValuePair("amount",amount));
+//        list.add(new BasicNameValuePair("subject","测试"));
+////        list.add(new BasicNameValuePair("couponId","9"));
+//        list.add(new BasicNameValuePair("body","支付宝测试"));
+//        list.add(new BasicNameValuePair("channel", TApplication.CHANNEL));
+//
+//        list.add(new BasicNameValuePair("client_ip", NetUtil.getLocalIpAddress(TApplication.context)));
         new Thread(){
             @Override
             public void run() {
                 String url= Const.URL_RECHARGE;
-                String result = HttpUtils.doPostAsyn(url, list);
+                String result = null;
+                try {
+                    result = HttpUtils.doMapPost(url, param);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 Log.d("TAG","result="+result);
 //                //解析charge ,用于支付成功后修改订单状态
-               TApplication.charge= JsonUtils.getCharge(result);
-                Message message = Message.obtain();
-                message.what=Const.MSG_SUCCESS;
-                message.obj=result;
-                handler.sendMessage(message);
+                if (result!=null){
+                    TApplication.charge= JsonUtils.getCharge(result);
+                    Message message = Message.obtain();
+                    message.what=Const.MSG_SUCCESS;
+                    message.obj=result;
+                    handler.sendMessage(message);
+                }
+
             }
 
         }.start();
@@ -68,9 +86,15 @@ public class PayBiz {
             @Override
             public void run() {
                 String url=Const.URL_UPDATA_RECHARGE;
-                List<BasicNameValuePair> list=new ArrayList<BasicNameValuePair>();
-                list.add(new BasicNameValuePair("id",TApplication.charge.getOrderNo()));
-                String result = HttpUtils.doPostAsyn(url, list);
+                final Map<String, String> param=new HashMap<String, String>();
+                param.put("id", TApplication.charge.getOrderNo());
+
+                String result = null;
+                try {
+                    result = HttpUtils.doMapPost(url, param);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 Log.d("TAG","result="+result);
                 boolean status = JsonUtils.getStatus(result);
                 Message message=Message.obtain();

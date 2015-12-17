@@ -117,7 +117,6 @@ public class CaptureActivity extends Activity implements Callback {
 	@Override
 	public void surfaceChanged(SurfaceHolder holder, int format, int width,
 			int height) {
-
 	}
 
 	@Override
@@ -126,7 +125,6 @@ public class CaptureActivity extends Activity implements Callback {
 			hasSurface = true;
 			initCamera(holder);
 		}
-
 	}
 
 	@Override

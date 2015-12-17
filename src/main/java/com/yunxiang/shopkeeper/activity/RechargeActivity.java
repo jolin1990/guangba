@@ -89,9 +89,12 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
                 String rechargeCategory="支付宝充值";
                 if (cbAli.isChecked()) {
                     rechargeCategory="支付宝充值";
+                    TApplication.CHANNEL=CHANNEL_ALIPAY;
+
                 }
                 if (cbChat.isChecked()) {
                     rechargeCategory="微信充值";
+                    TApplication.CHANNEL=CHANNEL_WECHAT;
                 }
                 money=etMoney.getText().toString();
                 if (money.length()==0){
@@ -124,8 +127,7 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
                     return;
                 }
                 money = String.format("%.2f", v1);
-
-                rechargeDialog=new RechargeDialog(this,R.style.MyDialogStyle,"1344557355",money,rechargeCategory);
+                rechargeDialog=new RechargeDialog(this,R.style.MyDialogStyle,TApplication.user.getUserName(),money,rechargeCategory);
                 rechargeDialog.show();
                 break;
         }

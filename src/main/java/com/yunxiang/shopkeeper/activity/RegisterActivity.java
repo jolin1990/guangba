@@ -102,7 +102,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 
         Handler handler;
-        Handler.Callback callback = new RegisterHandlerCallback();;
+        Handler.Callback callback = new RegisterHandlerCallback();
         UserBiz userBiz = UserBiz.getInstance();
         switch (v.getId()) {
             case R.id.txt_get_verify://获取验证码

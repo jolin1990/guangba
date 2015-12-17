@@ -402,30 +402,6 @@ public class HttpUtils {
         return strResult;
     }
 
-    /**
-     * 2015-5-5
-     * author jiely
-     * since JDK 1.6
-     */
-    public static String doPostAsyn(final String urlPath, final List<BasicNameValuePair> pairList) {
-        String strResult = "";
-        try {
-            HttpClient httpClient = new DefaultHttpClient();
-            httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 15000);
-            HttpPost post = new HttpPost(urlPath);
-            DebugUtils.d("HttpUtils_post","urlPath="+urlPath);
-            if(pairList != null){
-                post.setEntity(new UrlEncodedFormEntity(pairList, "utf-8"));
-            }
-            HttpResponse result = httpClient.execute(post);
-
-            strResult = EntityUtils.toString(result.getEntity());
-            DebugUtils.d("HttpUtils_post","jsonContent="+strResult);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return strResult;
-    }
 
 
     /**

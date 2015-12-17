@@ -33,19 +33,7 @@ public class ShopActivity extends Activity implements View.OnClickListener {
     private int count;
 
 
-    //    mchntid 	String 	商户号,由讯联数据分配
-//    inscd 	String 	机构号，商户所属机构标识
-//    terminalid 	String 	终端号
-//    isProduce 	boolean 	生产环境必须将此值设为TRUE
-//    signKey 	String 	双方约定的签名密钥
 
-    private static final String mchntid="100000000010001";
-    private static final String inscd="10134001";
-    private static final String terminalid="00000021";
-    private static final boolean isProduce=false;
-    private static final String signkey="zsdfyreuoyamdphhaweyrjbvzkgfdycs";
-
-    private static final int REQUESTCODE=0;
 
 
     @Override
@@ -105,61 +93,6 @@ public class ShopActivity extends Activity implements View.OnClickListener {
         btnMyShop.setOnClickListener(this);
         btnScan.setOnClickListener(this);
     }
-    //回调接口实现
-    CashierListener listener = new CashierListener() {
-        @Override
-        public void onResult(ResultData resultData) {
-            //下单支付  txamt,orderNum,scanCodeId,currency
-            //用户接收结果，进行处理
-            if (resultData.busicd.equals("PURC")) {
-                //交易成功
-                if ("00".equals(resultData.respcd)) {
-                    Log.d("TAG", "交易成功");
-                } else if ("09".equals(resultData.respcd)) {
-                    //交易处理中，查询订单
-                    OrderData orderData = new OrderData();
-                    orderData.origOrderNum = resultData.origOrderNum;
-                    CashierSdk.startQy(orderData, listener);
-                }
-            } else if (resultData.busicd.equals("PAUT")) {
-                //预下单
-            } else if (resultData.busicd.equals("INQY")) {
-                //订单查询
-                if ("00".equals(resultData.respcd)){
-                    Log.d("TAG", "交易成功");
-                }else{
-                    Log.d("TAG", "交易信息获取失败，请手动查询");
-                }
-            } else if (resultData.busicd.equals("VOID")) {
-                //撤消交易
-            } else if (resultData.busicd.equals("REFD")) {
-                //退款交易
-            } else if (resultData.busicd.equals("VERI")) {
-                //卡券核销
-            }
-        }
-        @Override
-        public void onError(int errorCode) {
-            //处理逻辑代码
-            switch (errorCode) {
-                case 0:
-                    Log.d("TAG", "请求超时");
-                    break;
-                case 1:
-                    Log.d("TAG",":OrderData.txamt:格式错误");
-                    break;
-                case 2:
-                    Log.d("TAG","币种不能为空，或不支持该币种");
-                    break;
-                case 3:
-                    Log.d("TAG", "服务器结果签名错误");
-                    break;
-                case 4:
-                    Log.d("TAG", "服务器无法处理的订单");
-                    break;
-            }
-        }
-    };
 
     @Override
     public void onClick(View v) {
@@ -206,46 +139,13 @@ public class ShopActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.btn_scan: //扫码收款
-                intent.setClass(ShopActivity.this, CaptureActivity.class);
-                startActivityForResult(intent, REQUESTCODE);
+
+
+                intent.setClass(ShopActivity.this, ScanCodeActivity.class);
+               startActivity(intent);
                 break;
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        String scanCodeId="";
-        if (requestCode==REQUESTCODE&&resultCode==RESULT_OK){
-            scanCodeId=data.getStringExtra("code");
-            Log.d("TAG","##scanCodeId="+scanCodeId);
-        }
-        if (scanCodeId!=null&&scanCodeId.length()!=0){
-            //下单 txamt,orderNum,scanCodeId,currency
-            OrderData orderData = new OrderData();
-            orderData.currency="156";
-            Date date=new Date();
-            DateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
-            String formatDate = dateFormat.format(date);
 
-            orderData.orderNum="yx"+formatDate;
-            orderData.txamt="0.01";
-            orderData.scanCodeId=scanCodeId;
-
-            Log.d("TAG","scanCodeId="+scanCodeId+"date="+formatDate);
-            init();//初始化扫码支付
-            CashierSdk.startPay(orderData, listener);
-        }
-
-    }
-    private void init() {
-        //初始化
-        InitData initData = new InitData();
-        initData.mchntid=mchntid;
-        initData.inscd=inscd;
-        initData.terminalid=terminalid;
-        initData.isProduce=isProduce;
-        initData.signKey=signkey;
-        CashierSdk.init(initData);
-    }
 }
