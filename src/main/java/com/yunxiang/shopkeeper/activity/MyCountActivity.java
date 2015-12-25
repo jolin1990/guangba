@@ -11,7 +11,7 @@ import com.yunxiang.shopkeeper.base.BaseTitle;
 
 public class MyCountActivity extends Activity implements View.OnClickListener {
     private TextView tvRecharge,tvWithdraw;
-    private TextView tvTotalMoney;
+    private TextView tvTotalMoney,tvRecord;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,14 @@ public class MyCountActivity extends Activity implements View.OnClickListener {
     private void setListener() {
         tvRecharge.setOnClickListener(this);
         tvWithdraw.setOnClickListener(this);
+        tvRecord.setOnClickListener(this);
     }
 
     private void initView() {
         tvRecharge= (TextView) findViewById(R.id.txt_put_money);
         tvWithdraw= (TextView) findViewById(R.id.txt_obtain_money);
         tvTotalMoney= (TextView) findViewById(R.id.txt_money);
-
+        tvRecord= (TextView) findViewById(R.id.txt_record);
     }
 
     @Override
@@ -42,6 +43,10 @@ public class MyCountActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.txt_obtain_money:
                 intent=new Intent(this,WithdrawCashActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.txt_record:
+                intent=new Intent(this,RecordActivity.class);
                 startActivity(intent);
                 break;
         }

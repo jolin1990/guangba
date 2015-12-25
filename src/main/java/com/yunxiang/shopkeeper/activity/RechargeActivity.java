@@ -165,9 +165,10 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
                 String extraMsg = data.getExtras().getString("extra_msg");
                 if("success".equals(result)){
 
-//                    UpdataOrderSatusCallback callback=new UpdataOrderSatusCallback();
-//                    Handler handler=new Handler(callback);
-//                    PayBiz.getInstance().upDataOrderStatus(handler);
+                    RechargeSuccessCallback callback=new RechargeSuccessCallback();
+                    Handler handler=new Handler(callback);
+                    PayBiz.getInstance().upDataOrderStatus(handler);
+
                 }else{
 
                 }
@@ -185,5 +186,17 @@ public class RechargeActivity extends Activity implements View.OnClickListener,R
         PayCallback callback=new PayCallback();
         Handler handler=new Handler(callback);
         PayBiz.getInstance().commitOrder(handler, money);
+    }
+    class RechargeSuccessCallback implements Handler.Callback{
+
+        @Override
+        public boolean handleMessage(Message msg) {
+
+            if (msg.what==Const.MSG_SUCCESS){
+                rechargeDialog.dismiss();
+                Toast.makeText(RechargeActivity.this,"充值成功",Toast.LENGTH_LONG).show();
+            }
+            return true;
+        }
     }
 }

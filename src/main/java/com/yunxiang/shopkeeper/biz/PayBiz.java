@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.yunxiang.shopkeeper.TApplication;
 import com.yunxiang.shopkeeper.utils.Const;
+import com.yunxiang.shopkeeper.utils.DebugUtils;
 import com.yunxiang.shopkeeper.utils.HttpUtils;
 import com.yunxiang.shopkeeper.utils.JsonUtils;
 import com.yunxiang.shopkeeper.utils.NetUtil;
@@ -87,8 +88,8 @@ public class PayBiz {
             public void run() {
                 String url=Const.URL_UPDATA_RECHARGE;
                 final Map<String, String> param=new HashMap<String, String>();
-                param.put("id", TApplication.charge.getOrderNo());
-
+                param.put("id", TApplication.charge.getId());
+                DebugUtils.d("TAG","id="+TApplication.charge.getId());
                 String result = null;
                 try {
                     result = HttpUtils.doMapPost(url, param);

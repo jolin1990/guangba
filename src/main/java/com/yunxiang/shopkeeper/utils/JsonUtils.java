@@ -595,8 +595,8 @@ public class JsonUtils {
         try {
             JSONObject jsonObject=new JSONObject(result);
             Charge charge=new Charge();
-//            charge.setId(jsonObject.optString("id"));
-            charge.setOrderNo(jsonObject.optString("serialNumber"));
+            charge.setId(jsonObject.optString("id"));
+//            charge.setOrderNo(jsonObject.optString("order_no"));
             return charge;
         } catch (JSONException e) {
             e.printStackTrace();

@@ -29,11 +29,17 @@ import com.yunxiang.shopkeeper.biz.PhotoBiz;
 import com.yunxiang.shopkeeper.utils.Const;
 import com.yunxiang.shopkeeper.utils.DictionaryUtil;
 
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class AddSpannerActivity extends Activity implements View.OnClickListener {
@@ -78,7 +84,7 @@ public class AddSpannerActivity extends Activity implements View.OnClickListener
             }
         }
 
-        pathList = new ArrayList<String>();
+        pathList = new ArrayList<>();
         for (int i = 1; i < countMode; i *= 2) {
             String path = DictionaryUtil.read(Const.VAL_SPANNER_PIC + i);
             imgList.add(path);
@@ -364,19 +370,19 @@ public class AddSpannerActivity extends Activity implements View.OnClickListener
         Bundle extras = picdata.getExtras();
         if (extras != null) {
             Bitmap photo = extras.getParcelable("data");
-            Drawable drawable = new BitmapDrawable(photo);
-
-            /**
-             　　* 下面注释的方法是将裁剪之后的图片以Base64Coder的字符方式上
-             　　* 传到服务器，QQ头像上传采用的方法跟这个类似
-             　　*/
-               ByteArrayOutputStream stream = new ByteArrayOutputStream();
-    photo.compress(Bitmap.CompressFormat.JPEG, 60, stream);
-    byte[] b = stream.toByteArray();
-
-
-            // 将图片流以字符串形式存储下来
-   String tp = new String(Base64Coder.encodeString(b));
+//            Drawable drawable = new BitmapDrawable(photo);
+//
+//            /**
+//             　　* 下面注释的方法是将裁剪之后的图片以Base64Coder的字符方式上
+//             　　* 传到服务器，QQ头像上传采用的方法跟这个类似
+//             　　*/
+//               ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//    photo.compress(Bitmap.CompressFormat.JPEG, 60, stream);
+//    byte[] b = stream.toByteArray();
+//
+//
+//            // 将图片流以字符串形式存储下来
+//   String tp = new String(Base64Coder.encodeString(b));
 //    　　这个地方大家可以写下给服务器上传图片的实现，直接把tp直接上传就可以了，
 //    　　服务器处理的方法是服务器那边的事了，吼吼
 //    　　如果下载到的服务器的数据还是以Base64Coder的形式的话，可以用以下方式转换
@@ -386,20 +392,50 @@ public class AddSpannerActivity extends Activity implements View.OnClickListener
 //    　　*/
 //            ib.setBackgroundDrawable(drawable);
 //            iv.setBackgroundDrawable(drawable);
-            refreshAdapter(tp);
+
+            String SAVE_PIC_PATH=Environment.getExternalStorageState().equalsIgnoreCase(Environment.MEDIA_MOUNTED) ? Environment.getExternalStorageDirectory().getAbsolutePath():"/mnt/sdcard";//保存到SD卡
+
+            Date date=new Date();
+            DateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
+            String formatDate = dateFormat.format(date);
+            String fileName=formatDate+"jolin.jpg";
+
+            String path = SAVE_PIC_PATH+"/yunxiang/"+formatDate;//保存的确切位置
+
+            try {
+                saveFile(photo,fileName,path);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            //剪裁后的图片地址
+            String urlPath =path+"/"+fileName;
+
+
+            refreshAdapter(urlPath);
         }
     }
 
+     void saveFile(Bitmap bm, String fileName, String path) throws IOException {
 
+        File foder = new File(path);
+        if (!foder.exists()) {
+            foder.mkdirs();
+        }
+        File myCaptureFile = new File(path, fileName);
+        if (!myCaptureFile.exists()) {
+            myCaptureFile.createNewFile();
+        }
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(myCaptureFile));
+        bm.compress(Bitmap.CompressFormat.JPEG, 80, bos);
+        bos.flush();
+        bos.close();
 
-
-
-
-
-
-
-
-
+        Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        Uri uri = Uri.fromFile(myCaptureFile);
+        intent.setData(uri);
+        sendBroadcast(intent);//这个广播的目的就是更新图库，发了这个广播进入相册就可以找到
+    }
 
 
     private void refreshAdapter(String path){

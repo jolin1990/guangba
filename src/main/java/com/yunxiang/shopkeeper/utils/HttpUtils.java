@@ -244,6 +244,7 @@ public class HttpUtils {
         HttpClient client = new DefaultHttpClient();
         DebugUtils.d("httpUtils", "doPost url=" + url);
 
+
         HttpResponse response = client.execute(put);
         int stateCode = response.getStatusLine().getStatusCode();
         StringBuilder sb = new StringBuilder();
@@ -262,6 +263,52 @@ public class HttpUtils {
         DebugUtils.d("httpUtils", "doPost jsonString=" + sb.toString());
         return sb.toString();
     }
+
+
+    /**
+     * 以POST方式提交map数据数据
+     * param url
+     * param param
+     * param file
+     * return
+     * throws Exception
+     */
+    public static String doMapPut(String url,Map<String, String> param) throws Exception {
+        HttpPut put = new HttpPut(url);
+        String head = DictionaryUtil.read("JSESSIONID");
+        put.setHeader("Cookie", "JSESSIONID=" + head);
+        HttpClient client = new DefaultHttpClient();
+        DebugUtils.d("httpUtils", "doPost url=" + url);
+        if (param.size() > 0) {
+            List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(param.size());
+            Set<String> keys = param.keySet();
+            for (String key : keys) {
+                nameValuePairs.add(new BasicNameValuePair(key, String.valueOf(param.get(key))));
+                DebugUtils.d("httpUtils key=" + key, "doPost value=" + String.valueOf(param.get(key)));
+            }
+            UrlEncodedFormEntity entity = new UrlEncodedFormEntity(nameValuePairs, "utf-8");
+            put.setEntity(entity);
+        }
+
+        HttpResponse response = client.execute(put);
+        int stateCode = response.getStatusLine().getStatusCode();
+        StringBuilder sb = new StringBuilder();
+        if (stateCode == HttpStatus.SC_OK) {
+            HttpEntity result = response.getEntity();
+            if (result != null) {
+                InputStream is = result.getContent();
+                BufferedReader br = new BufferedReader(new InputStreamReader(is));
+                String tempLine;
+                while ((tempLine = br.readLine()) != null) {
+                    sb.append(tempLine);
+                }
+            }
+        }
+        //post.abort();
+        DebugUtils.d("httpUtils", "doPost jsonString=" + sb.toString());
+        return sb.toString();
+    }
+
 
     /**
      * 以PUT方式提交修改文件
